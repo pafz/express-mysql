@@ -7,8 +7,8 @@ const app = express();
 const db = require("./config/database.js");
 
 app.use("/products", require("./routes/products"));
-// app.use("/categories", require("./routes/categories"));
-// app.use("/productscategories", require("./routes/productscategories"));
+app.use("/categories", require("./routes/categories"));
+app.use("/productscategories", require("./routes/productscategories"));
 
 // middleware
 app.use(express.json());
